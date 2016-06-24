@@ -7,9 +7,9 @@ require_once 'Model/Model.php';
 
 $car = new Car();
 
-$car->setColor("Green")->setType("Sedan")->setColorNumber(14);
+$car->setColor("Green")->setType("Sedan")->setColorNumber(14)->setColorHex("#FFFFF");
 
-echo "My car is a " .  $car->getColorInfo() . PHP_EOL . $car->getType() . "<br />";
+echo "My car is a " .  serialize($car->getColorInfo()) . PHP_EOL . $car->getType() . "<br />";
 
 $train = new Train();
 
