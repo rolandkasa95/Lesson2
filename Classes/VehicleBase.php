@@ -85,6 +85,11 @@ class VehicleBase
         if($this->$name) return true;
     }
 
+    public function __invoke()
+    {
+        return get_class_methods(get_class($this));
+    }
+
     public function __unset($name)
     {
         unset($this->$name);
