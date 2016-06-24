@@ -85,6 +85,10 @@ class VehicleBase
         if($this->$name) return true;
     }
 
+    public function __clone(){
+        $this->setType('SUV');
+    }
+
     public function __invoke()
     {
         return get_class_methods(get_class($this));
