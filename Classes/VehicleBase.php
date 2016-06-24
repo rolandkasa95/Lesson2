@@ -69,11 +69,12 @@ class VehicleBase
             case ($this instanceof Car):
                 require 'Diagnostic/CarDiagnostic.php';
                 $diagnostic = new CarDiagnostic($name, $arguments);
-                return $diagnostic->$name($arguments);
-            case ($this instanceof Car):
+                return $diagnostic->runDiagnostic();
+            case ($this instanceof Train):
                 require 'Diagnostic/TrainDiagnostic.php';
                 $diagnostic = new TrainDiagnostic($name,$arguments);
-                return $diagnostic->$name($arguments);
+                return $diagnostic->runDiagnostic();
         }
+        return false;
     }
 }

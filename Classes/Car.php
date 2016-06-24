@@ -33,8 +33,4 @@ class Car extends VehicleBase
         return $info;
     }
 
-    public function getColorInfo($param){
-        
-    }
-
 }

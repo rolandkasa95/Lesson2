@@ -1,8 +1,13 @@
 <?php
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 require_once 'Classes/Car.php';
 require_once 'Classes/Train.php';
 require_once 'Classes/Plane.php';
+require_once  'Classes/VehicleBase.php';
 require_once 'Model/Model.php';
 
 $car = new Car();
@@ -23,10 +28,5 @@ $plane->setColor("White")->setType('Boeing 747')->setCapacity(650)->setColorNumb
 
 echo "Last but not least, my airplane is " . $plane->getColorInfo() . PHP_EOL . $plane->getType() . " and it's capacity is " . $plane->getCapacity();
 
-
-$config = require_once 'config/configDatabase.php';
-
-//var_dump($config['Car']);
-
-$model = Model::connection($config);
-$model = Model::createTable($config);
+$car2 = new Car('sedan',1);
+$car2->runDiagnostic(['car','suv']);
