@@ -4,8 +4,25 @@ require_once 'VehicleBase.php';
 
 class Car extends VehicleBase
 {
-    public $colorHex;
+    protected $colorHex;
 
+    /**
+     * @return mixed
+     */
+    public function getColorHex()
+    {
+        return $this->colorHex;
+    }
+
+    /**
+     * @param $colorHex
+     * @return $this
+     */
+    public function setColorHex($colorHex)
+    {
+        $this->colorHex = $colorHex;
+        return $this;
+    }
     public function getColorInfo(){
         $info = parent::getColorInfo();
         if ($this->colorHex){
