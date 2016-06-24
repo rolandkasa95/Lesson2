@@ -30,5 +30,6 @@ echo "Last but not least, my airplane is " . $plane->getColorInfo() . PHP_EOL . 
 
 $car->hasSeatBelt = "no";
 echo "<br /> Seat belt on: " . $car->hasSeatBelt;
+
 //$car2 = new Car('sedan',1);
 //$car2->runDiagnostic();

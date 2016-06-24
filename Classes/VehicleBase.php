@@ -80,6 +80,11 @@ class VehicleBase
         return $this->colorNumber;
     }
 
+    public function __isset($name)
+    {
+        if($this->$name) return true;
+    }
+
     /**
      * @return bool|string
      */
