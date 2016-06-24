@@ -38,11 +38,24 @@ class VehicleBase
         return $this->type;
     }
 
+    /**
+     * @param $colorNumber
+     */
     public function setColorNumber($colorNumber){
         $this->colorNumber = $colorNumber;
     }
 
+    /**
+     * @return mixed
+     */
     public function getColorNumber(){
         return $this->colorNumber;
+    }
+    
+    public function getColorInfo(){
+        if ($this->colorNumber && $this->color){
+            return '$this->color: $this->colorNumber';
+        }
+        return false;
     }
 }
