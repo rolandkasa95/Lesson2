@@ -43,6 +43,7 @@ class VehicleBase
      */
     public function setColorNumber($colorNumber){
         $this->colorNumber = $colorNumber;
+        return $this;
     }
 
     /**
@@ -54,7 +55,7 @@ class VehicleBase
     
     public function getColorInfo(){
         if ($this->colorNumber && $this->color){
-            return '$this->color: $this->colorNumber';
+            return $this->color . ": " . $this->colorNumber;
         }
         return false;
     }

@@ -20,7 +20,6 @@ class Model
                 $sql .= $value . " , ";
               }
             $sql .= ")";
-            echo $sql;
             self::$pdo->prepare($sql)->execute();
         }catch (PDOException $e){
             echo "Fatal error: " . $e->getMessage();
