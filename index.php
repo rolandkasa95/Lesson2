@@ -23,4 +23,6 @@ $plane->setColor("White")->setType('Boeing 747')->setCapacity(650);
 
 echo "Last but not least, my airplane is " . $plane->getColor() . PHP_EOL . $plane->getType() . " and it's capacity is " . $plane->getCapacity();
 
-$model = Model::createTable();
+
+$config = require_once 'config/configDatabase.php';
+$model = Model::createTable($config["car"]);

@@ -16,8 +16,10 @@ class Model
         try{
             $sql = 'CREATE TABLE IF NOT EXISTS $config["table_name"] (';
               foreach($config['table_name'] as $key => $value){
-                $sql .= $key[$value];
+                $sql .= $key[$value] . " , ";
               }
+            $sql .= ")";
+            echo $sql;
         }catch (PDOException $e){
             echo "Fatal error: " . $e->getMessage();
         }
