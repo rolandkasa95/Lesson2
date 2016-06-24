@@ -34,7 +34,7 @@ echo "<br /> Seat belt on: " . $car->hasSeatBelt;
 $car->model = "Alfa";
 
 if (isset($car->model)){
-    echo "Model: " . $car->model;
+    echo "Model: " . $car->model . "<br />";
     unset($car->model);
 }
 
