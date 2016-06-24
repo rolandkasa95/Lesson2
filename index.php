@@ -9,6 +9,7 @@ require_once 'Classes/Train.php';
 require_once 'Classes/Plane.php';
 require_once  'Classes/VehicleBase.php';
 require_once 'Model/Model.php';
+require_once 'Classes/OrderedList.php';
 
 $car = new Car();
 
@@ -45,3 +46,7 @@ echo $serializedObj;
 $restoredCar = unserialize($serializedObj);
 
 echo "Type is:" . $restoredCar->getType();
+
+$orderedList = new OrderedList();
+
+echo $orderedList($car());
