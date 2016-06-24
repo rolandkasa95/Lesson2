@@ -52,11 +52,28 @@ class VehicleBase
     public function getColorNumber(){
         return $this->colorNumber;
     }
-    
+
+    /**
+     * @return bool|string
+     */
     public function getColorInfo(){
         if ($this->colorNumber && $this->color){
             return $this->color . ": " . $this->colorNumber;
         }
         return false;
+    }
+    
+    public function __call($name, $arguments)
+    {
+        switch (true){
+            case ($this instanceof Car):
+                require 'CarDiagnostic.php';
+                $diagnostic = new CarDiagnostic($name, $arguments);
+                return $diagnostic->$nume($arguments);
+            case ($this instanceof Car):
+                require 'TrainDiagnostic.php';
+                $dignostic = new TrainDiagnostic($name,$arguments);
+                return $diagnostic->$name($arguments);
+        }
     }
 }
