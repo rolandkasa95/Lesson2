@@ -1,8 +1,8 @@
 <?php
 
-require_once 'Car.php';
+require_once 'VehicleBase.php';
 
-class Train extends Car
+class Train extends VehicleBase
 {
     public $size;
 
