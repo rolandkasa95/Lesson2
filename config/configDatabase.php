@@ -4,6 +4,10 @@ return array(
     'dsn' => 'mysql:host=localhost;dbname=oop',
     'user' => 'root',
     'pass' => 'Kasamargit22',
+    'autoloaderpaths' => array(
+        'Classes',
+        'Model'
+    ),
     'Car' => array(
         'table_name' => 'Car',
         'id' => 'id INT(6) PRIMARY KEY AUTO_INCREMENT NOT NULL',
