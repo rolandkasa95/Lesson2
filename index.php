@@ -3,6 +3,7 @@
 require_once 'Classes/Car.php';
 require_once 'Classes/Train.php';
 require_once 'Classes/Plane.php';
+require_once 'Model/Model.php';
 
 $car = new Car();
 
@@ -21,3 +22,5 @@ $plane = new Plane();
 $plane->setColor("White")->setType('Boeing 747')->setCapacity(650);
 
 echo "Last but not least, my airplane is " . $plane->getColor() . PHP_EOL . $plane->getType() . " and it's capacity is " . $plane->getCapacity();
+
+$model = Model::createTable();
