@@ -6,12 +6,25 @@ class VehicleBase
     public $type;
     protected $colorNumber;
 
-
+    /**
+     * This method sets the value of the
+     * property which is given
+     *
+     * @param $name
+     * @param $value
+     */
     public function __set($name, $value)
     {
         $this->$name=$value;
     }
 
+    /**
+     * This method extracts the value of the
+     * property sent
+     *
+     * @param $value
+     * @return mixed
+     */
     public function __get($value){
         return $this->value;
     }
