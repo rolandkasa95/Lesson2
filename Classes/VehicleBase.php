@@ -90,6 +90,11 @@ class VehicleBase
         unset($this->$name);
     }
 
+    public function __wakeup()
+    {
+        return true;
+    }
+
     public function __sleep()
     {
         return array('color','type','colorNumber','colorHex');
