@@ -50,3 +50,6 @@ echo "Type is:" . $restoredCar->getType();
 $orderedList = new OrderedList();
 
 echo $orderedList($car());
+
+$suv = clone $car;
+echo "<br />" . $suv->getType();
