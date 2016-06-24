@@ -8,7 +8,9 @@ class CarDiagnostic
     public function __construct($arg,$args)
     {
         $this->$arg = $arg;
-        $this->$args = $args;
+        foreach($args as $key => $value){
+            $this->$args[$key] = $value;
+        }
     }
     
     public function runDiagnostic(){
