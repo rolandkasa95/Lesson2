@@ -24,4 +24,14 @@ trait Airliner{
         $this->hasBusinessClass = $hasBusinessClass;
         return  $this;
     }
+
+    /**
+     * @param $operator
+     * @return $this
+     */
+    public function setOperator($operator)
+    {
+        $this->operator = $operator;
+        return $this;
+    }
 }
