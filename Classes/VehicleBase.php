@@ -12,6 +12,9 @@ class VehicleBase
         $this->$name=$value;
     }
 
+    public function __get($value){
+        return $this->value;
+    }
 
     /**
      * @param $type
