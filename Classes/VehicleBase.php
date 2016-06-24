@@ -85,6 +85,11 @@ class VehicleBase
         if($this->$name) return true;
     }
 
+    public function __unset($name)
+    {
+        unset($this->$name);
+    }
+
     /**
      * @return bool|string
      */
