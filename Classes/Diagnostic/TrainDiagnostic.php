@@ -7,4 +7,9 @@ class TrainDiagnostic
         $this->$arg = $arg;
         $this->$args = $args;
     }
+
+    public function runDiagnostic(){
+        return true;
+    }
+
 }
