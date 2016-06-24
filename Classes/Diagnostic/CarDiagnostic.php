@@ -11,4 +11,7 @@ class CarDiagnostic
         $this->$args = $args;
     }
     
+    public function runDiagnostic(){
+        return true;
+    }
 }
