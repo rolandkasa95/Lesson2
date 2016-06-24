@@ -72,7 +72,7 @@ class VehicleBase
                 return $diagnostic->$nume($arguments);
             case ($this instanceof Car):
                 require 'TrainDiagnostic.php';
-                $dignostic = new TrainDiagnostic($name,$arguments);
+                $diagnostic = new TrainDiagnostic($name,$arguments);
                 return $diagnostic->$name($arguments);
         }
     }
