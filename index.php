@@ -25,4 +25,8 @@ echo "Last but not least, my airplane is " . $plane->getColor() . PHP_EOL . $pla
 
 
 $config = require_once 'config/configDatabase.php';
-$model = Model::createTable($config["car"]);
+
+//var_dump($config['Car']);
+
+$model = Model::connection($config);
+$model = Model::createTable($config);

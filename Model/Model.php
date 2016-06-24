@@ -10,16 +10,18 @@ class Model
         }catch (PDOException $e){
             echo "Fatal error connecting: " . $e->getMessage();
         }
+        return $pdo;
     }
 
     public static function createTable($config){
         try{
-            $sql = 'CREATE TABLE IF NOT EXISTS $config["table_name"] (';
-              foreach($config['table_name'] as $key => $value){
-                $sql .= $key[$value] . " , ";
+            $sql = 'CREATE TABLE IF NOT EXISTS ' . $config['Car']['table_name'] .' (';
+            foreach($config['Car'] as $value){
+                $sql .= $value . " , ";
               }
             $sql .= ")";
             echo $sql;
+            self::$pdo->prepare($sql)->execute();
         }catch (PDOException $e){
             echo "Fatal error: " . $e->getMessage();
         }
