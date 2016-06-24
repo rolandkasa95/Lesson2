@@ -5,9 +5,23 @@ trait Airliner{
     public $hasBusinessClass = false;
     public $operator;
 
+    /**
+     * @param $hasFirstClass
+     * @return $this
+     */
     public function setHasFirstClass($hasFirstClass)
     {
         $this->hasFirstClass = $hasFirstClass;
         return $this;
+    }
+
+    /**
+     * @param $hasBusinessClass
+     * @return $this
+     */
+    public function setHasBusinessClass($hasBusinessClass)
+    {
+        $this->hasBusinessClass = $hasBusinessClass;
+        return  $this;
     }
 }
