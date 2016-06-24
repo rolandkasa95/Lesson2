@@ -35,6 +35,7 @@ $car->model = "Alfa";
 
 if (isset($car->model)){
     echo "Model: " . $car->model;
+    unset($car->model);
 }
 //$car2 = new Car('sedan',1);
 //$car2->runDiagnostic();
