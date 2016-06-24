@@ -42,3 +42,6 @@ $serializedObj = serialize($car);
 
 echo $serializedObj;
 
+$restoredCar = unserialize($serializedObj);
+
+echo "Type is:" . $restoredCar->getType();
