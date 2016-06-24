@@ -4,6 +4,25 @@ class VehicleBase
 {
     public $color;
     public $type;
+
+    /**
+     * @return mixed
+     */
+    public function getColor()
+    {
+        return $this->color;
+    }
+
+    /**
+     * @param $color
+     * @return $this
+     */
+    public function setColor($color)
+    {
+        $this->color = $color;
+        return $this;
+    }
+
     protected $colorNumber;
 
     /**

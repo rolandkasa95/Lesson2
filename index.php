@@ -28,5 +28,7 @@ $plane->setColor("White")->setType('Boeing 747')->setCapacity(650)->setColorNumb
 
 echo "Last but not least, my airplane is " . $plane->getColorInfo() . PHP_EOL . $plane->getType() . " and it's capacity is " . $plane->getCapacity();
 
+$car->hasSeatBelt = "no";
+echo "<br /> Seat belt on: " . $car->hasSeatBelt;
 //$car2 = new Car('sedan',1);
 //$car2->runDiagnostic();
