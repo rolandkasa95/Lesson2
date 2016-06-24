@@ -1,9 +1,7 @@
 <?php
 
-require_once 'Classes/Car.php';
-require_once 'Classes/Train.php';
-require_once 'Classes/Plane.php';
-require_once 'Model/Model.php';
+require_once 'Classes/ObjectFactoryService.php';
+require_once 'Loader.php';
 
 $car = new Car();
 

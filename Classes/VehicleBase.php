@@ -4,7 +4,7 @@ class VehicleBase
 {
     public $color;
     public $type;
-
+    protected $colorNumber;
     /**
      * @param $color
      * @return $this
@@ -36,5 +36,13 @@ class VehicleBase
     public function getType()
     {
         return $this->type;
+    }
+
+    public function setColorNumber($colorNumber){
+        $this->colorNumber = $colorNumber;
+    }
+
+    public function getColorNumber(){
+        return $this->colorNumber;
     }
 }
