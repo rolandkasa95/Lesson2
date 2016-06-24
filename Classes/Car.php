@@ -25,9 +25,9 @@ class Car extends VehicleBase
     }
     public function getColorInfo(){
         $info = parent::getColorInfo();
-        if ($this->colorHex){
+        if (isset($this->colorHex)){
             $data['General'] = parent::getColorInfo();
-            $date['Hex Value'] = $this->colorHex;
+            $data['Hex Value'] = $this->getColorHex();
             return $data;
         }
         return $info;
