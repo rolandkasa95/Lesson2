@@ -67,11 +67,11 @@ class VehicleBase
     {
         switch (true){
             case ($this instanceof Car):
-                require 'CarDiagnostic.php';
+                require 'Diagnostic/CarDiagnostic.php';
                 $diagnostic = new CarDiagnostic($name, $arguments);
-                return $diagnostic->$nume($arguments);
+                return $diagnostic->$name($arguments);
             case ($this instanceof Car):
-                require 'TrainDiagnostic.php';
+                require 'Diagnostic/TrainDiagnostic.php';
                 $diagnostic = new TrainDiagnostic($name,$arguments);
                 return $diagnostic->$name($arguments);
         }
